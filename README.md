@@ -6,9 +6,11 @@
 - Install JS deps: `npm install`
 - Environment: copy `.env.example` to `.env`, then set the DB connection (SQLite default) and AI keys (see below).
 - Generate app key: `php artisan key:generate`
+- Generate database file (if using SQLite): `touch database/database.sqlite`
 - Migrate and seed: `php artisan migrate:fresh --seed`
 - Run app: `composer run dev`
 - Tests (static analysis, style, blades, unit/feature, coverage): `composer test`
+- If you encounter issue with `vite`, try `npm run build` before running tests.
 
 ## AI API Used & Rationale
 - **Google Gemini** via `app/Services/GeminiService.php`
